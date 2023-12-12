@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 400px;
+            background-color: aquamarine;
+            margin: 100px;
+            padding: 10px;
+        }
+        form{
+            position: relative;
+        }
+        input{
+            display: block;
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        input[type="submit"]{
+            width: 60%;
+            background-color: red;
+            color: white;
+            margin: 20px 50px;
+            font-size: 20px;
+        }
+        #warning-img{
+            width: 20px;
+            position: absolute;
+            left: 310px;
+            top:10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h1>Sign Up</h1>
+       <form>
+         <input type="text" name="firstname" id="firstname" placeholder="Enter your First Name">
+         <img src="./images/warning-img.jpg" width="20" id="warning-img">
+
+         <input type="text" name="Lastname" id="lastname" placeholder="Enter yourLastName">
+         <input type="email" name="Email" id="Email" placeholder="Enter your email">
+         <input type="password" name="password" id="pwd" placeholder="Enter the password">
+         <input type="submit" value="submit">
+       </form>
+     </div>
+     
+     
+
+     <script>
+      var f_event= document.getElementById("firstname");
+      
+      f_event.onblur = function fevent(){
+        var Fname = document.getElementById("firstname").value;
+        var Fname_input = document.getElementById("firstname");
+      var warning = document.getElementById("warning-img");
+      if(Fname == ""){
+        Fname_input.style.border = "1px solid red";
+        warning.style.display = "block";
+      }
+      }
+     </script> 
+</body>
+</html>
