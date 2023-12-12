@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageFilter</title>
+    <style>
+      h1{
+        text-align: center;
+        color: green;
+      }
+      #pic{
+        width: 800px;
+        height: 400px;
+      }
+       .img-container{
+        border: 2px solid black;
+        width: 800px;
+        height: 400px;
+        margin: 20px auto;
+       }
+       .button-container{
+        display: flex;
+        text-align: center;
+        margin: 10px;
+        justify-content: center;
+       }
+       #tool{
+        margin: 10px;
+       }
+      #tool p{
+        font-weight: bold;
+        font-size: 20px;
+        color: green;
+      }
+    </style>
+</head>
+
+<body>
+  <h1>Image Filter</h1>
+  <div class="img-container">
+    <img src="Nature-img.jpg" id="pic">
+  </div>
+
+   <div class="button-container"> 
+    <div id="tool">
+      <p>Brightness</p>
+      <input type="range" id="bright" min="0" max="200" oninput="bright()">
+    </div>
+
+    <div id="tool">
+      <p>Constrat</p>
+      <input type="range" id="constrat" min="0" max="400" oninput="contrast()">
+    </div>
+
+    <div id="tool">
+      <p>saturate</p>
+      <input type="range" id="saturate" min="0" max="500" oninput="saturate()">
+    </div>
+  </div>
+  <p id="result"></p>
+
+  <script>
+    function bright(){
+      var x = document.getElementById("bright").value;
+      var pic = document.getElementById("pic");
+      pic.style.filter = "brightness("+x+"%)";
+    }
+
+    function contrast(){
+      var x = document.getElementById("constrat").value;
+      var pic = document.getElementById("pic");
+      pic.style.filter = "contrast("+x+"%)";
+    }
+
+    function saturate(){
+      var x = document.getElementById("saturate").value;
+      var pic = document.getElementById("pic");
+      pic.style.filter = "saturate("+x+"%)";
+    }
+  </script> 
+
+</body>
+</html>
