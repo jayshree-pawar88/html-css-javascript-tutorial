@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoomInOut</title>
+</head>
+<body>
+    <p id="text">Welcome to the center</p>
+    <br>
+    <button id="in">Zoom In</button>
+    <button id="out">Zoom Out</button>
+    <button id="reset">Reset</button>
+    <script>
+       var Z_in = document.getElementById("in");
+       var Z_out = document.getElementById("out");
+       var reset = document.getElementById("reset");
+       var result = document.getElementById("text");
+       Z_in.onclick = function first(){
+            result.style.fontSize = "20px";
+
+            Z_in.onclick = function second(){
+                result.style.fontSize = "40px";
+
+                Z_in.onclick = function third(){
+                   result.style.fontSize = "60px";
+                }
+            }    
+        }
+
+        Z_out.onclick = function last(){
+                result.style.fontSize = "60px";
+                
+                Z_out.onclick = function mid(){
+                    result.style.fontSize = "40px";
+
+                    Z_out.onclick = function last(){
+                        result.style.fontSize = "20px";
+                    }
+                }
+        }
+        reset.onclick = function ret(){
+            result.style.fontSize = "20px";
+        }
+       
+    </script>
+</body>
+</html>1
