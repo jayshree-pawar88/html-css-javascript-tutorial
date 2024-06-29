@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image changer</title>
+    <Style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color: red;
+            text-align: center;
+        }
+       #big-img{
+        height: 400px;
+        width: 800px;
+        border: 2px solid black;
+        margin: 20px auto;
+       } 
+       .container{
+        justify-content: center;
+        display: flex;
+       }
+       #small-img{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: 10px;
+        
+       }
+    </Style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div id="big-img">
+     <img src="./images/new-born7.jpg" height="400" width="800" id="uploaded">
+    </div>
+
+    <div class="container">
+        <div id="small-img"><img src="./images/new-born1.jpg" height="100" width="100" onclick="first()"></div>
+
+        <div id="small-img"><img src="./images/new-born2.jpg" height="100" width="100" onclick="second()"></div>
+
+        <div id="small-img"><img src="./images/new-born3.jpg" height="100" width="100" onclick="third()"></div>
+
+        <div id="small-img"><img src="./images/new-born4.jpg" height="100" width="100" onclick="forth()"></div>
+
+        <div id="small-img"><img src="./images/new-born5.jpg" height="100" width="100" onclick="fifth()"></div>
+
+        <div id="small-img"><img src="./images/new-born6.jpg" height="100" width="100" onclick="six()"></div>
+    </div>
+
+    <script>
+        function first(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born1.jpg";
+        }
+
+        function second(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born2.jpg";
+        }
+
+        function third(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born3.jpg";
+        }
+
+        function forth(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born4.jpg";
+        }
+
+        function fifth(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born5.jpg";
+        }
+
+        function six(){
+        var uploadedImg = document.getElementById("uploaded");
+        uploadedImg.src = "./images/new-born6.jpg";
+        }
+    </script>
+
+</body>
+</html>

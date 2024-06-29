@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+</head>
+<body>
+    <h1 id="text"></h1>
+    <div id="img">
+    <img src="baby-img.jpg" alt= "img not show">
+    </div>
+    <script>
+       // id selector
+       document.getElementById("text").innerHTML = "Hello world";
+    
+       //class selector
+       document.getElementById("img").style.width = "500px";
+       document.getElementById("img").style.height = "300px";
+       document.getElementById("img").style.border = "5px solid blue";
+       document.getElementById("img").style.textAlign = "center";
+       document.getElementById("img").style.backgroundColor = "pink";
+    </script>
+</body>
+</html>

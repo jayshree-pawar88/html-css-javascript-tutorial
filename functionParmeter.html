@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunctionParameter</title>
+</head>
+<body>
+    <form>
+    <label for="first">First Number</label>
+    <input type="text" id="first">
+
+    <label for="second">Second Number</label>
+    <input type="text" id="second"><br>
+
+    <input type="button" value="Addition" onclick="main()">
+    </form>
+    <h1>Addition</h1>
+    <p id="add"></p>
+    <h1>Substraction</h1>
+    <p id="sub"></p>
+    <h1>Multiplication</h1>
+    <p id="mul"></p>
+    <h1>Division</h1>
+    <p id="div"></p>
+
+    <script>
+        function main(){
+            var x = Number(document.getElementById("first").value);
+            var y = Number(document.getElementById("second").value);
+            add(x,y);
+            sub(x,y);
+            mul(x,y);
+            div(x,y);
+        }
+
+        function add(a,b){
+            document.getElementById("add").innerHTML = a+b;
+        }
+        function sub(a,b){
+            document.getElementById("sub").innerHTML = a-b;
+        }
+        function mul(a,b){
+            document.getElementById("mul").innerHTML = a*b;
+        }
+        function div(a,b){
+            document.getElementById("div").innerHTML = a/b;
+        }
+         
+         
+        
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition</title>
+    <style>
+        #pic{
+            margin-left: 15%;
+        }
+        .btn-container{
+            text-align: center;
+        }
+        .btn{
+           background-color: crimson;
+           border-radius: 5px;
+           padding: 10px;
+           font-weight: bold;
+           font-size: 20px; 
+        }
+  </style>
+</head>
+<body>
+    <div>
+    <img src="Nature-img.jpg" width="900" height="500" id="pic" >
+    </div>
+    <div class="btn-container">
+    <button class="btn" id="btn-text" onclick="myDisplay()">Hide</button>
+    </div>
+
+    <script>
+        function myDisplay(){
+        var img = document.getElementById("pic");
+        var button = document.getElementById("btn-text");
+        var text = button.innerHTML;
+        if(text=="Show"){
+            img.style.display = "block";
+            button.innerHTML = "Hide";
+        
+        }
+        else{
+            img.style.display = "none";
+            button.innerHTML = "Show";
+        }
+        }
+    </script>
+</body>
+</html>

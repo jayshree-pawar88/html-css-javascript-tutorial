@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set Attribute</title>
+</head>
+<body>
+    <h1 id="heading">Welcome!</h1>
+    <button id="btn">Click me</button>
+    <script>
+        var button = document.getElementById("btn");
+        button.onclick = function myfunction(){
+            var myheading = document.getElementById("heading");
+            myheading.setAttribute("align","center");
+        }
+    </script>
+</body>
+</html>

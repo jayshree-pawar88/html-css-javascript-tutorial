@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JointName</title>
+    <style>
+        form{
+            border: 1px solid black;
+            padding: 30px;
+            width: 200px;
+            margin: 50px 100px;
+            background-color: pink;
+            font-weight: bold;
+        }
+        input{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form return onsubmit="demo()">
+        <label for="fname">Enter Your First Name</label>
+        <input type="text" id="fname" name="fname">
+
+        <label>Enter Your Last Name</label>
+        <input type="text" id="lname" name="lname">
+
+        <button type="submit">Submit</button>
+        
+    </form>
+
+    <script>
+        function demo(){
+            var x = document.getElementById("fname").value;
+            var y = document.getElementById("lname").value;
+            var z = x + " " + y;
+                alert("Your Name:" +z);
+        
+         }
+    </script>
+    
+</body>
+</html>

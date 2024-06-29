@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OddEvenNumber</title>
+</head>
+<body>
+    <input type="number" id="my-number">
+    <button onclick="oddEven()">Check</button>
+    <p id="result"></p>
+    <script>
+        function oddEven(){
+            var x = document.getElementById("my-number").value;
+            if(x%2 == 0){
+               document.getElementById("result").innerHTML = "The number is even";
+            }else{
+                document.getElementById("result").innerHTML = "The number is odd";
+            }
+        }
+
+    </script>
+</body>
+</html>

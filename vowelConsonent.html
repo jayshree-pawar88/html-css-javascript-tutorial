@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VowelConsonent</title>
+</head>
+<body>
+    <h1>To check Vowel and Consonent</h1>
+    <form onsubmit="return check()" id="frm">
+        <input type="text" id="inputVal" placeholder="Enter the letter">
+        <input type="submit">
+    </form>
+
+    <script>
+        var data = document.getElementById("inputVal");
+        var form = document.getElementById("frm");
+
+        // form.onsubmit = function()
+        // {
+        //     if(data.value == "a"){
+        //         window.alert("vowel");
+        //     }
+        //     else if(data.value == "e"){
+        //         window.alert("vowel");
+        //     }
+        //     else if(data.value == "i"){
+        //         window.alert("o");
+        //     }
+        //     else if(data.value == "u"){
+        //         window.alert("u");
+        //     }
+        //     else{
+        //         window.alert("consonent");
+        //     }    
+        // }
+
+    
+
+        //----Using switch case--------//
+         form.onsubmit = function(){
+        switch(data.value){
+            case 'a' : {window.alert("vowel")};
+            break;
+            case 'e' : {window.alert("vowel")};
+            break;
+            case 'i' : {window.alert("vowel")};
+            break;
+            case 'o' : {window.alert("vowel")};
+            break;
+            case 'u' : {window.alert("vowel")};
+            break;
+            default: {window.alert("consonent")};
+        }
+    }
+    </script>
+</body>
+</html>

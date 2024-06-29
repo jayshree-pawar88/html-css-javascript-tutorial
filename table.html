@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        form{
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return completTable()">
+        <h2>Table</h2>
+        <input type="number" id="table-number">
+        <input type="submit" value="submit">
+        <p id="complete-table"></p>
+    </form>
+
+    <script>
+        function completTable(){
+    
+        var value = document.getElementById("table-number").value;
+        var result = document.getElementById("complete-table");
+        var i;
+
+        for(let i=1; i<=10; i++){
+           result.innerHTML +=  value * i + "<br>";
+        }
+       return false; 
+    }
+    </script>
+</body>
+</html>

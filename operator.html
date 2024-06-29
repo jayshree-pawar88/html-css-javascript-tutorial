@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       .container{
+        margin: 100px;
+        width: 600px;
+        height: 400px;
+        background-color: black;
+        color: white;
+       }
+       h1{
+        text-align: center;
+        color: pink;
+        font-weight: bold;
+       }
+       
+       #result{
+        width: 80%;
+        height: 30px;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        height: 35px;
+        border-radius: 5px;
+        margin-left: 40px;
+       }
+       .number{
+        display: flex;
+        width: 90%;
+        text-align: center;
+        margin: 0px 30px;
+       }
+       #first-number{
+        border-radius: 5px;
+        width: 250px;
+        height: 30px;
+        margin: 10px;
+        font-size: 30px;
+       }
+       #second-number{
+        border-radius: 5px;
+        width: 250px;
+        height: 30px;
+        margin: 10px;
+        font-size: 30px;
+       }
+       button{
+        padding: 10px;
+        background-color: pink;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+        margin: 10px;
+       }
+       .btn{
+        float: left;
+        text-align: center;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmatic Operator</h1>
+
+             <div id="result"></div>
+        
+        <div class="number">
+            <input type="number" id="first-number" name="display">
+            <input type="number" id="second-number">
+        </div>   
+
+            <div class="btn">
+                <button onclick="addition();">Addition(+)</button>
+                <button onclick="sub();">Substraction(-)</button>
+                <button onclick="mul();">Multipliaction(*)</button>
+                <button onclick="div();">Division(/)</button>
+                <button onclick="module();">Modulus(%)</button>
+                <button onclick="clearInput();">Clear</button>
+            </div> 
+    </div>
+
+    <script>
+        function addition(){
+            let x = document.getElementById("first-number").value;
+            let y = document.getElementById("second-number").value;
+            document.getElementById("result").innerHTML = Number(x) + Number(y);
+
+        }
+    
+        function sub(){
+            let x = document.getElementById("first-number").value;
+            let y = document.getElementById("second-number").value;
+            document.getElementById("result").innerHTML = Number(x) - Number(y);
+
+        }
+    
+        function mul(){
+            let x = document.getElementById("first-number").value;
+            let y = document.getElementById("second-number").value;
+            document.getElementById("result").innerHTML = Number(x) * Number(y);
+
+        }
+    
+        function div(){
+            let x = document.getElementById("first-number").value;
+            let y = document.getElementById("second-number").value;
+            document.getElementById("result").innerHTML = Number(x) / Number(y);
+
+        }
+    
+        function module(){
+            let x = document.getElementById("first-number").value;
+            let y = document.getElementById("second-number").value;
+            document.getElementById("result").innerHTML = Number(x) % Number(y);
+        }
+        fnumber = document.getElementById("first-number");
+
+        function clearInput(){
+            fnumber.value='';
+            document.getElementById("second-number").value='';
+            document.getElementById("result").innerHTML='';
+            // console.log(document.getElementById('first-number'));
+            // const inputs = document.querySelectorAll('#first-number, #second-number, #result');
+            // console.log(inputs);
+            // inputs.forEach(input => {
+            // input.value = '';
+            // return true;
+        // });
+    }
+    </script>
+</body>
+</html>

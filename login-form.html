@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+   
+    <style>
+      .container{
+        width: 300px;
+        height: 300px;
+        background-color: blueviolet;
+        color: white;
+        padding: 20px;
+        margin: 100px;
+      }
+      form{
+        font-size: 25px;
+        font-weight: bold;
+      }
+      form input{
+        display: block;
+        width: 70%;
+        height: 25px;
+        border-radius: 5px;
+      }
+      form input[type="submit"]{
+        background-color: green;
+        border-radius: 10px;
+        height: 35px;
+        margin: 20px 0px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <div class="container"> 
+    <form onsubmit="return valueSubmit()">
+    <label for="username">Username</label>
+    <input type="text" id="username">
+
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" onclick="passwordGenerator()"><span id="msg"></span>
+     
+    <input type="submit" value="submit">
+    </form>
+    <p id="result"></p>
+  </div>
+    <script>
+        function valueSubmit(){
+            var x = document.getElementById("username").value;
+            var y = document.getElementById("pwd").value;
+            var check = x == "jayshree" && y == 1234567890 ? "login succefully" : "login failed";
+            document.getElementById("result").innerHTML = check;
+            return false;
+        }
+
+        function passwordGenerator(){
+          var y = document.getElementById("msg");
+          y.innerHTML = "Enter 10 Digit Password";
+        }
+
+    </script>
+    
+</body>
+</html>

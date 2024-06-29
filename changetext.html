@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeText</title>
+    <style>
+        #btn{
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body id="bgbtn">
+    <h1>Chnage the button text and color</h1>
+    <button id="btn" onclick="mybtn()">Jayshree-Pawar</button>
+    <button onclick="background()">Change Background-color</button>
+    <br>
+    <br>
+    <form>
+        <lable>Enter password</lable><br>
+        <input type="password" id="pwd">
+        <input type="checkbox" id="change-pwd" onclick="showPassword()">
+        <label>Show Password</label>
+        <br><br>
+        <input type="text" id="userInput">
+        <button onclick="myvalue()">click</button>
+    </form>
+    <script>
+        function mybtn(){
+           var btn = document.getElementById("btn");
+           btn.innerHTML = "jayshree-ozarkar";
+           btn.style.backgroundColor = "green";
+           btn.style.fontSize = "25px";
+        }
+
+        function background(){
+              var a = document.getElementById("bgbtn");
+              a.style.backgroundColor = "pink";
+        }
+
+        function showPassword(){
+            var x = document.getElementById("pwd");
+            x.type = "text";
+        }
+
+        function myvalue(){
+            var z = document.getElementById("userInput").value;
+            alert(z);
+        }
+    </script>
+</body>
+</html>
